@@ -1,0 +1,48 @@
+* {
+    --white: rgba(255, 240, 250, 1);
+    --color1: rgba(255, 227, 220, 1);
+    --color2: rgba(219, 180, 173, 1);
+    --color3: rgba(166, 0, 103, 1);
+    --color4: rgba(150, 29, 78, 1);
+    --color5: rgba(54, 10, 20, 1);
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color1);
+}
+
+header {
+    background-color: var(--color5);
+    height: 5vw;
+    line-height: 5vw;
+    color: var(--white);
+    padding: 0px 10px;
+    font-size: 1.5rem;
+}
+
+.exercise {
+    background-color: var(--color3);
+    color: var(--white);
+    width: 20vw;
+    margin: 1em;
+}
+
+.exercise__title {
+    background-color: var(--color4);
+    padding: 1em 2em;   
+}
+
+.exercise__content {
+    background-color: var(--color3);
+}
+
+.exercise__description {
+    padding: 2em;
+}
+
+.exercise__correction {
+    background-color: var(--color4);
+    padding: 2em;
+}
+
