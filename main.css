@@ -17,15 +17,26 @@ header {
     height: 5vw;
     line-height: 5vw;
     color: var(--white);
-    padding: 0px 10px;
+    padding: 0px 20px;
     font-size: 1.5rem;
+}
+
+.exercise__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .exercise {
     background-color: var(--color3);
     color: var(--white);
-    width: 20vw;
+    width: 30vw;
     margin: 1em;
+    box-shadow: var(--color2) 2px 2px 3px;
+}
+
+.exercise:hover {
+    box-shadow: var(--color2) 3px 3px 3px;
 }
 
 .exercise__title {
@@ -43,6 +54,10 @@ header {
 
 .exercise__correction {
     background-color: var(--color4);
-    padding: 2em;
+    /* padding: 2em; */
+}
+
+.exercise__correction--hidden{
+    display: none;
 }
 
