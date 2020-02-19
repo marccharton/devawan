@@ -1,13 +1,28 @@
+function findContentNode(node) {
+    if (node.parentNode.classList.contains("exercise__content")) {
+        return node.parentNode;
+    } else {
+        return findContentNode(node.parentNode);
+    }
+}
 function handleChangeCorrectionVisibility(e) {
-    let obj = e.target.parentNode.childNodes, correction;
-    for (key in obj) {
-        if (obj.hasOwnProperty(key) && obj[key].classList !== undefined && obj[key].classList.contains("exercise__correction")) {
-            correction = obj[key];
+    let contentNodeChildren = findContentNode(e.target)?.childNodes;
+    let className = "exercise__correction--hidden";
+    let correction;
+
+    for (key in contentNodeChildren) {
+        if (contentNodeChildren.hasOwnProperty(key) 
+            && contentNodeChildren[key].classList !== undefined 
+            && contentNodeChildren[key].classList.contains("exercise__correction")) 
+        {
+            correction = contentNodeChildren[key];
             break;
         }
     }
+    if (contentNodeChildren === undefined || correction === undefined) {
+        return ;
+    }
 
-    let className = "exercise__correction--hidden";
     if (correction.classList.contains(className)) {
         correction.classList.remove(className);
     } else {
@@ -37,13 +52,14 @@ function renderExercise({name, description, correction}) {
     let code = document.createElement("code");
     code.classList.add("language-javascript");
     exercise__correction.appendChild(pre).appendChild(code);
-    code.innerHTML = correction;
+    code.innerHTML = correction ?? "// pas encore de correction";
 
     document.querySelector(".exercise__container").appendChild(exercise);
     exercise.appendChild(exercise__title);
     exercise.appendChild(exercise__content);
     exercise__content.appendChild(exercise__description);
     exercise__content.appendChild(exercise__correction);
+    
 }
 function renderExerciceList(exerciseList) {
     exerciseList.forEach(function(exercise) {
