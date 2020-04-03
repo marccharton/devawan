@@ -72,6 +72,19 @@ header h1 {
     display: none;
 }
 
+
+.error__message {
+    padding: 50px;
+    margin: 20px auto;
+    background-color: #222;
+    color: chartreuse;
+    border-radius: 2px;
+    box-shadow: #444 2px 2px 5px;
+    width: 80vw;
+}
+
+
+
 @media screen and (max-width: 1200px) {
 
     .exercise {
