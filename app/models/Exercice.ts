@@ -1,19 +1,29 @@
-import {Sequelize, Model, DataTypes} from "sequelize";
-import client from "../database";
+const Sequelize = require('sequelize');
+const client = require('../database');
 
-class Exercice extends Model {}
+class Exercice extends Sequelize.Model {}
 
+// Exercice.init({
+//     name: DataTypes.STRING,
+//     description: DataTypes.STRING,
+//     correction: DataTypes.STRING,
+// }, {
+//     sequelize: client,
+//     tableName: "exercice",
+//     // modelName: 'exercice',
+//     underscored: true,
+//     createdAt: "created_at",
+//     updatedAt: "updated_at"
+// });
 Exercice.init({
-    name: DataTypes.STRING(255),
-    description: DataTypes.TEXT,
-    correction: DataTypes.TEXT,
-}, {
+    name: Sequelize.STRING,
+    description: Sequelize.STRING,
+    correction: Sequelize.STRING,
+  },{
     sequelize: client,
     tableName: "exercice",
-    modelName: 'exercice',
     underscored: true
-    // createdAt: "created_at",
-    // updatedAt: "updated_at"
-});
+  });
 
-export default Exercice;
+
+module.exports = Exercice;
