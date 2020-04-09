@@ -2,10 +2,12 @@
 
 // 1. D'abord, require tous nos modèles
 const Exercice = require('./exercice');
+const User = require('./user');
 
 // 2. définir toutes les associations
 
 // 3. réexporter tout ça dans un joli module.
 module.exports = {
-  Exercice
+  Exercice,
+  User
 };

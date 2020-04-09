@@ -2,11 +2,9 @@
 
 
 <div class="error__message">
-    <%= err %>
-    <br>
-    <button>
-        <a target="_blank" href="https://www.google.com/search?q=<%=err%>">Google it !</a>
-    </button>
+    <a target="_blank" href="https://www.google.com/search?q=<%=error%>">
+        <%= error %>
+    </a>
 </div>
 
 <%- include('partials/footer') %>
