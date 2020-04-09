@@ -1,8 +1,12 @@
 
 const loginController = {
 
-    signup: (req, res) => {
+    signupPage: (req, res) => {
       res.render('signup');
+    },
+
+    loginPage: (req, res) => {
+      res.render('login');
     }
     
 }
