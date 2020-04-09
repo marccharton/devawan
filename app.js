@@ -1,12 +1,12 @@
-import express from "express";
-import os from 'os'; 
-import dotenv from "dotenv";
+const express =require("express");
+const os =require('os'); 
+const dotenv =require("dotenv");
 dotenv.config();
 
-import router from "./app/router";
+const router = require("./app/router");
 
-const nodePort: string = process.env.PORT || "8080"; 
-const app: express.Application = express();
+const nodePort= process.env.PORT || "8080"; 
+const app= express();
 
 app.set("view engine", "ejs");
 app.set("views", "./app/views");

@@ -1,5 +1,5 @@
 // import express from "express";
-const { EX } = require('../models');
+const { Exercice } = require('../models');
 
 // import exerciseList from "../models/exerciceList";
 
@@ -11,7 +11,7 @@ const mainController = {
         // return res.render("index", {exerciseList});
 
         // // on va chercher tous les quizzes dans la DB...
-        EX.findAll().then( exerciseList => {
+        Exercice.findAll().then( exerciseList => {
           // ... si tout est ok, je render ma view
           // console.log(quizzes);
           res.render('index', {exerciseList});
