@@ -5,4 +5,34 @@
   <p class="lead">Espace permettant de gérer les exercices</p>
 </div>
 
+<form action="/signup" method="POST" class="form-signin">
+
+  <% if(locals.error) { %>
+    <div class="form-label-group">
+      <div class="col-12 alert alert-danger">
+        <%= error %>
+      </div>
+    </div>
+  <% } %>
+
+  <div class="form-label-group">
+    <label for="name">Nom de l'exercice</label>
+    <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp" placeholder="Les boucles">
+  </div>
+
+  <div class="form-label-group">
+    <label for="description">Description de l'exercice</label>
+    <textarea rows="10" class="form-control" id="description" name="description" aria-describedby="descriptionHelp" placeholder="Faire des boucles à l'envers avec un pouet qui se balade"></textarea>
+  </div>
+
+  <div class="form-label-group">
+    <label for="correction">Correction</label>
+    <textarea rows="10" class="form-control" id="correction" name="correction" aria-describedby="correctionHelp" placeholder="for(pouet of Pouetosaure) {\n\tcheck();\n}"></textarea>
+  </div>
+
+  <div class="form-group text-center">
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+  </div>
+</form>
+
 <%- include('partials/footer') %>
