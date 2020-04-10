@@ -1,8 +1,8 @@
 <%- include('partials/header') %>
 
-    <section class="exercise__container">
+    <section class="exercise__container grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "masonry" }'>
         <% for (let exercice of exerciseList) { %>
-            <article class="exercise">
+            <article class="exercise grid-item">
                 <div class="exercise__title"><%= exercice.name %></div>
                 <div class="exercise__content">
                     <div class="exercise__description"><%= exercice.description %></div>
