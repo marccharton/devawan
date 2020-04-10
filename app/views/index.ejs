@@ -1,17 +1,17 @@
 <%- include('partials/header') %>
 
-        <section class="exercise__container">
-            <% for (let exercice of exerciseList) { %>
-                <article class="exercise">
-                    <div class="exercise__title"><%= exercice.name %></div>
-                    <div class="exercise__content">
-                        <div class="exercise__description"><%= exercice.description %></div>
-                        <div class="exercise__correction exercise__correction--hidden">
-                            <pre class=" language-javascript"><code class="language-javascript"><%= exercice.correction %></code></pre>
-                        </div>
+    <section class="exercise__container">
+        <% for (let exercice of exerciseList) { %>
+            <article class="exercise">
+                <div class="exercise__title"><%= exercice.name %></div>
+                <div class="exercise__content">
+                    <div class="exercise__description"><%= exercice.description %></div>
+                    <div class="exercise__correction exercise__correction--hidden">
+                        <pre class=" language-javascript"><code class="language-javascript"><%= exercice.correction %></code></pre>
                     </div>
-                </article>
-            <% } %>
-        </section>
+                </div>
+            </article>
+        <% } %>
+    </section>
 
 <%- include('partials/footer') %>

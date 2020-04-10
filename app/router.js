@@ -4,6 +4,8 @@ const exerciceController = require('./controllers/exerciceController');
 const userController = require('./controllers/userController');
 const adminController = require('./controllers/adminController');
 
+const adminMiddleware = require('./middlewares/admin');
+
 const router = express.Router();
 
 router.get('/', mainController.home);
@@ -22,6 +24,7 @@ router.route('/login')
 router.get('/logout', userController.logout);
 router.get('/profile', userController.profilePage);
 
-router.get('/admin', adminController.homePage);
+router.get('/admin', adminMiddleware, adminController.homePage);
+router.get('/401', adminController.);
 
 module.exports = router;
