@@ -1,4 +1,4 @@
-<%- include('partials/header', {isAdminMode}) %>
+<%- include('partials/header', {isAdminMode: true}) %>
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h2 class="h1 display-4">Administration</h2>
@@ -11,6 +11,14 @@
     <div class="form-label-group">
       <div class="col-12 alert alert-danger">
         <%= error %>
+      </div>
+    </div>
+  <% } %>
+
+  <% if(locals.information) { %>
+    <div class="form-label-group">
+      <div class="col-12 alert alert-primary">
+        <%= information %>
       </div>
     </div>
   <% } %>
