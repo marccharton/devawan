@@ -25,6 +25,9 @@ router.get('/logout', userController.logout);
 router.get('/profile', userController.profilePage);
 
 router.get('/admin', adminMiddleware, adminController.homePage);
-router.get('/401', adminController.);
+router.route('/admin/exercice')
+        .get(adminMiddleware, adminController.addExercicePage)
+        .post(adminMiddleware, adminController.addExerciceAction)
+        ;
 
 module.exports = router;
