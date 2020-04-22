@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exercises",
+  "info": {
+    "name": "Exercises"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "correction": {
+      "type": "richtext"
+    },
+    "labels": {
+      "collection": "label",
+      "via": "exercises"
+    },
+    "categories": {
+      "collection": "category"
+    }
+  }
+}

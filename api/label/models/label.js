@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `exercice` model.
+ * Lifecycle callbacks for the `label` model.
  */
 
 module.exports = {

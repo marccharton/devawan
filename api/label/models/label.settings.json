@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "labels",
+  "info": {
+    "name": "label"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Color": {
+      "type": "string"
+    },
+    "exercises": {
+      "via": "labels",
+      "collection": "exercises",
+      "dominant": true
+    }
+  }
+}

@@ -1,22 +1,22 @@
 {
   "kind": "collectionType",
-  "collectionName": "exercices",
+  "collectionName": "categories",
   "info": {
-    "name": "Exercice"
+    "name": "Category"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Description": {
-      "type": "text"
+    "description": {
+      "type": "string"
     },
-    "Correction": {
-      "type": "richtext"
+    "color": {
+      "type": "string"
     }
   }
 }

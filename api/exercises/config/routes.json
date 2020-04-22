@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/exercices",
-      "handler": "exercice.find",
+      "path": "/exercises",
+      "handler": "exercises.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/exercices/count",
-      "handler": "exercice.count",
+      "path": "/exercises/count",
+      "handler": "exercises.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/exercices/:id",
-      "handler": "exercice.findOne",
+      "path": "/exercises/:id",
+      "handler": "exercises.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/exercices",
-      "handler": "exercice.create",
+      "path": "/exercises",
+      "handler": "exercises.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/exercices/:id",
-      "handler": "exercice.update",
+      "path": "/exercises/:id",
+      "handler": "exercises.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/exercices/:id",
-      "handler": "exercice.delete",
+      "path": "/exercises/:id",
+      "handler": "exercises.delete",
       "config": {
         "policies": []
       }
