@@ -9,14 +9,14 @@
     "timestamps": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "Description": {
+    "description": {
       "type": "string"
     },
-    "Color": {
+    "color": {
       "type": "string"
     },
     "exercises": {
